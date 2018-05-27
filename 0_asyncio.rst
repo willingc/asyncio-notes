@@ -18,7 +18,7 @@ An Important Goal
 
 "The ultimate goal is to help establish a common, easily approachable, mental
 model of asynchronous programming in Python and make it as close to
-synchronous programming as possible."
+synchronous programming as possible." - PEP 492
 
 Why asynchronous programming?
 -----------------------------
