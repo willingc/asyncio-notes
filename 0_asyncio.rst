@@ -7,11 +7,16 @@ Getting Started with asyncio
 Building Understanding
 ======================
 
-The terminology and jargon around concurrency and asynchronous communication 
-and processing can obscure the concepts of what is happening.
+The terminology and jargon around concurrency, asynchronous communication, 
+and coroutines can obscure the different concepts of what the asyncio module provides in Python.
 
 This section strives to break down the jargon and increase understanding about
-asyncio.
+asyncio by:
+
+- sharing the ultimate goal of asyncio
+- explaining asynchronous programming and its comparison to synchronous programming
+- describing what a coroutine is
+- creating a timeline of the different coroutine approaches used in Python's history
 
 An Important Goal
 -----------------
@@ -20,15 +25,18 @@ An Important Goal
 model of asynchronous programming in Python and make it as close to
 synchronous programming as possible." - PEP 492
 
+Understanding asynchronous programming
+--------------------------------------
+
 Why asynchronous programming?
------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - web growth
 - many long lived connections
 - efficiency of resources
 
 Asynchronous vs Synchronous
----------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 synchronous - step by step through time; meticulous can't go out of order
 
@@ -36,32 +44,47 @@ asynchronous - planning a party; workers do what they can do until they reach
 a roadblock or bottleneck; when the roadblock or bottleneck is removed; continue
 working
 
+From Generators to Native Coroutines
+------------------------------------
+
+Slightly complicating the understanding of coroutines in Python is that there exists
+more than one implementation of coroutines.
+As Python grew and evolved, the language added generators, then coroutines via enhanced generators, and
+recently coroutines using async/await in the asyncio module.
+
+Generators -> Coroutines (*generator-based*) via Enhanced Generators -> Coroutines (*native*) in asyncio
+
 What is a Generator?
---------------------
+~~~~~~~~~~~~~~~~~~~~
 
 Generators are almost coroutines.
 Generators can not yield control easily.
 Pass values into a generator when it has suspended.
 Generators don't allow easy cleanup.
 
-What is a Coroutine?
---------------------
+Using generators to create limited coroutines
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Python's History of Coroutines
-------------------------------
+Initially, when PEP 342 was accepted, coroutine behavior was created by enhancing Python Generators.
+We'll refer to these as *generator-based* coroutines. 
 
 PEP 342 Coroutines via Enhanced Generators
 - added yield to generators
 - yield (like pause in a video game)
 - closely tied to generators
 
-*generator-based* coroutines
+Native Coroutines
+~~~~~~~~~~~~~~~~~
+
+Beginning with PEP 492 and Python 3.6, a proper standalone concept of coroutines was added.
+We refer to these as *native* coroutines, and these *native* coroutines rely on the ``async`` and
+``await`` keywords.
 
 PEP 492 Coroutines with async/await syntax
 - provides a proper standalone concept of coroutines
 - adds syntax to support this concept
 
-*native* coroutines (async/await)
+Most often, especially when writing new code, you will choose to use *native* coroutines (``async`` and ``await``).
 
 Overview of the asyncio module
 ==============================
@@ -72,6 +95,7 @@ High-level asyncio
 High-level async/await
 ----------------------
 
+* :keyword:`async` and :keyword:`await` are reserved keywords.
 
 A basic tutorial
 ================
@@ -127,7 +151,6 @@ Resources
 Background from release notes
 =============================
 
-* :keyword:`async` and :keyword:`await` are now reserved keywords.
 * PEP 567 Context Variables: The new :mod:`contextvars` module and a set of
   :ref:`new C APIs <contextvarsobjects>` introduce
   support for *context variables*.  Context variables are conceptually
