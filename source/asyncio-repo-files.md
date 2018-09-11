@@ -1,6 +1,6 @@
-# asyncio for developers
+# asyncio library files
 
-## asyncio library files (alphabetical)
+## Alphabetical
 
 |  file  |  purpose   |
 |--------|------------|
@@ -30,7 +30,7 @@
 | windows_events.py | Selector and proactor event loops for Windows |
 | windows_utils.py | Windows helper utilities |
 
-## async library files (by functionality)
+## By functionality
 
 | file | purpose |
 |------|---------|
@@ -49,7 +49,7 @@
 | **Tasks** | |
 | base_tasks.py | task and its stack info |
 | tasks.py | Support for tasks, coroutines and the scheduler; Task - coroutine wrapped in a Future |
-| **Subprocesses
+| **Subprocesses** | |
 | base_subprocess.py | Base subprocess transport and r/w pipe protocols |
 | subprocess.py | subprocess readers and writers |
 | **Comms** | |

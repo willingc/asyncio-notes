@@ -13,6 +13,6 @@ This is an **unofficial** document for developing on Python's asyncio.
 .. toctree::
     :maxdepth: 2
 
-    asyncio-repo-files.md
     asyncio-history.md
     asyncio-concepts.md
+    asyncio-repo-files.md
