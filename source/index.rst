@@ -3,12 +3,14 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-asyncio developer notes
-=======================
 
-This is an unofficial document for developing on Python's asyncio.
+asyncio: Notes for Developers
+=============================
+
+This is an **unofficial** document for developing on Python's asyncio.
 
 
 .. toctree::
+    :maxdepth: 2
 
     async-repo-files.md

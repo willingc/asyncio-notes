@@ -1,18 +1,17 @@
-# asyncio for developers 
-
+# asyncio for developers
 
 ## asyncio library files (alphabetical)
 
-| file | purpose |
-|------|---------|
-| \__init\__.py | |
+|  file  |  purpose   |
+|--------|------------|
+| \__init\__.py |  |
 | base_events.py | Base implementation of event loop |
 | base_futures.py | Check for a future and helper functions |
 | base_subprocess.py | Base subprocess transport and r/w pipe protocols |
 | base_tasks.py | task and its stack info |
 | constants.py | misc constants for connections and comms |
 | coroutines.py | coroutine helpers and wrapper |
-| events.py | Event loop abstract classes and handles | 
+| events.py | Event loop abstract classes and handles |
 | format_helpers.py | callback format helpers |
 | futures.py | Future class |
 | locks.py | lock primitives, context, Event, Condition, Semaphore, BoundedSemaphore |
@@ -30,7 +29,6 @@
 | unix_events.py | Selector event loop for Unix with signal handling |
 | windows_events.py | Selector and proactor event loops for Windows |
 | windows_utils.py | Windows helper utilities |
-| 
 
 ## async library files (by functionality)
 
@@ -38,7 +36,7 @@
 |------|---------|
 | **Event Loop** | |
 | base_events.py | Base implementation of event loop |
-| events.py | Event loop abstract classes and handles | 
+| events.py | Event loop abstract classes and handles |
 | selector_events.py | event loop using "notify-when-ready" mux; unix |
 | proactor_events.py | event loop using "notify on completion" mux; windows |
 | unix_events.py | Selector event loop for Unix with signal handling |
