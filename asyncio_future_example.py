@@ -1,4 +1,6 @@
 """asyncio_future_example.py"""
+import asyncio
+
 
 async def set_after(fut, delay, value):
     # Sleep for *delay* seconds.
